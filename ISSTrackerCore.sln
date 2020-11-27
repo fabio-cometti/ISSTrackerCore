@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISSTracker", "ISSTracker\ISSTracker.csproj", "{E99853DE-F91D-4F11-B74F-D66C92CD58E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISSTracker.Test", "ISSTracker.Test\ISSTracker.Test.csproj", "{E1917C9A-8F0C-4D3D-A8A7-B42D244FDF66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E99853DE-F91D-4F11-B74F-D66C92CD58E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E99853DE-F91D-4F11-B74F-D66C92CD58E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E99853DE-F91D-4F11-B74F-D66C92CD58E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E99853DE-F91D-4F11-B74F-D66C92CD58E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1917C9A-8F0C-4D3D-A8A7-B42D244FDF66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1917C9A-8F0C-4D3D-A8A7-B42D244FDF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1917C9A-8F0C-4D3D-A8A7-B42D244FDF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1917C9A-8F0C-4D3D-A8A7-B42D244FDF66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88618675-5289-456A-9ED0-7F25F6FE0022}
+	EndGlobalSection
+EndGlobal
