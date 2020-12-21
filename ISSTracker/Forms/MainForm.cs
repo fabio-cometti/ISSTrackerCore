@@ -25,9 +25,11 @@ namespace ISSTracker
             string url = ConfigurationManager.AppSettings["ISSApiURL"];
             ITrackerService trackerService = new TrackerService(client, url);
             IMapService mapService = new MapService();
-            IAPIMapperService converter = new APIMapperService();                        
+            IAPIMapperService converter = new APIMapperService();
+            IDistanceService distanceService = new DistanceService();
+            ISpeedService speedService = new SpeedService();
 
-            MapForm map = new MapForm(trackerService, mapService, converter);
+            MapForm map = new MapForm(trackerService, mapService, converter, distanceService, speedService);
             map.Show();
         }
     }

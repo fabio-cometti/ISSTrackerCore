@@ -22,15 +22,23 @@ namespace ISSTracker
     {
         private readonly ITrackerService trackerService;
         private readonly IMapService mapService;
-        private readonly IAPIMapperService converter;               
+        private readonly IAPIMapperService converter;
+        private readonly IDistanceService distanceService;
+        private readonly ISpeedService speedService;
 
-        public MapForm(ITrackerService trackerService, IMapService mapService, IAPIMapperService converter)
+        public MapForm(ITrackerService trackerService, 
+            IMapService mapService, 
+            IAPIMapperService converter, 
+            IDistanceService distanceService, 
+            ISpeedService speedService)
         {
             InitializeComponent();
             
             this.trackerService = trackerService;
             this.mapService = mapService;
-            this.converter = converter;                      
+            this.converter = converter;
+            this.distanceService = distanceService;
+            this.speedService = speedService;
             this.mapService.PositionUpdated += MapService_PositionUpdated;
         }
 
@@ -53,7 +61,13 @@ namespace ISSTracker
         }
 
         private void MapService_PositionUpdated(object sender, PositionUpdatedEventArgs e)
-        {  
+        {
+            var distanceInKm = distanceService.CalculateDistanceBetweenPoints(e.PreviousPosition, e.CurrentPosition) / 1000;
+            var interval = e.Timespan;
+            var kmPerHour = this.speedService.CalculateSpeed(distanceInKm, interval);
+
+            this.SpeedLabel.Text = $"Speed: {kmPerHour.ToString("0.00")} Km/h";
+
             this.LatitudeLabel.Text = $"Latitude: {e.CurrentPosition.Lat.ToString("0.000")}";
             this.LongitudeLabel.Text = $"Longitude: {e.CurrentPosition.Lng.ToString("0.000")}";
         }

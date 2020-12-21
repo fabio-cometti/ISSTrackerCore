@@ -54,11 +54,11 @@ namespace ISSTracker
             this.Text = "Map";
             this.Load += MapForm_Load;
 
-            //this.SpeedLabel = new Label();
-            //this.SpeedLabel.Location = new System.Drawing.Point(10, 10);
-            //this.SpeedLabel.Size = new System.Drawing.Size(200, 16);            
-            //this.SpeedLabel.BackColor = System.Drawing.Color.SteelBlue;  
-            //this.Controls.Add(this.SpeedLabel);
+            this.SpeedLabel = new Label();
+            this.SpeedLabel.Location = new System.Drawing.Point(10, 10);
+            this.SpeedLabel.Size = new System.Drawing.Size(200, 16);
+            this.SpeedLabel.BackColor = System.Drawing.Color.SteelBlue;
+            this.Controls.Add(this.SpeedLabel);
 
             this.LatitudeLabel = new Label();
             this.LatitudeLabel.Location = new System.Drawing.Point(412, 10);
