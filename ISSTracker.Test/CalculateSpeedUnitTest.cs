@@ -65,7 +65,7 @@ namespace ISSTracker.Test
             double speed = speedService.CalculateSpeed(distance, timeDiff);
 
             //Assert
-            speed.Should().Be(10000);
+            speed.Should().Be(expectedSpeed);
         }
 
         public static IEnumerable<object[]> GetInvalidData()
